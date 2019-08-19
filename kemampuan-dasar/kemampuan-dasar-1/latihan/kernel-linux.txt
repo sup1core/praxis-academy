@@ -1,0 +1,12 @@
+# ==> dpkg --get-selections | grep linux-image
+linux-image-4.15.0-2-generic
+linux-image-generic
+
+#Ls /boot
+abi-4.15.0-20-generic		memtest86+.elf
+config-4.15.0-20-generic	memtest86+_multiboot.bin
+grub				retpoline-4.15.0.20-generic
+initrd.img-4.15.0-20		System.map-4.15.0-20-generic
+memtest85+.bin			vmlinuz-4.15.0-20-generic
+
+

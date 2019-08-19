@@ -1,0 +1,21 @@
+#Menyimpan suatu OS
+GRUB_DEFAULT=saved
+GRUB_SAVEDEFAULT=true
+
+#Jangka waktu layar kosong namun tersedia untuk display 
+#GRUB_HIDDEN_TIMEOUT=0
+
+#menampilkan penghitung waktu mundur untuk menyajikan umpan balik visual atas jangka waktu yang tersisa sampai entri default dieksekusi
+GRUB_HIDDEN_TIMEOUT_QUITET=true
+
+#waktu jeda eksekusi
+GRUB_TIMEOUT=10
+
+#versi grub
+GRUB_DISTRIBUTOR='lsb_release -I -s 2> /dev/null || echo Debian'
+
+#Baris ini mengimpor entri apa pun ke akhir baris 'linux' (GRUB   "kernel" baris lawas). Entri tersebut ditambahkan ke bagian akhir   hanya mode normal.
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+
+#Entri pada baris ini ditambahkan ke akhir baris perintah 'linux'   (Baris "kernel" GRUB legacy) untuk mode normal dan recovery. Saya t   digunakan untuk memberikan opsi ke kernel.
+GRUB_CMDLINE_LINUX=""

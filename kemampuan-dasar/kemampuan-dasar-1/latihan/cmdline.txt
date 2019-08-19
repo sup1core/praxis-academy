@@ -1,0 +1,381 @@
+### https://www.guru99.com ###
+   42  ls
+   43  ls -a
+   44  cat sample_1
+   45  cat > sample_1
+   46  cat > sample_2
+   47  cat sample_1 sample_2 > sample
+   48  cat sample
+   49  ls -a
+   50  rm sample_1
+   51  ls
+   52  mv sample_2 /home/supicore/Documents/
+   53  ls
+   54  touch test
+   55  ls
+   56  mv test test1
+   57  ls
+   58  mkdir mydirectory
+   59  ls
+   60  mkdir /tmp/MUSIC
+   61* 
+   62  mkdir dir1 dir2 dir3
+   63  ls
+   64  rmdir mydirectory
+   65  ls
+   66  mv dir1 dir1-rename
+   67  ls
+   72  man man
+   73* 
+   74  clear
+   75  ls
+   76  history
+
+
+
+
+
+
+
+#### E-Guide - PDF ###
+
+supicore@supicore1:~$ ls
+Desktop      dir2  Documents  Music     Public  Templates  Videos
+dir1-rename  dir3  Downloads  Pictures  sample  test1
+supicore@supicore1:~$ cat sample 
+This is sample1
+This is sample2supicore@supicore1:~$ 
+supicore@supicore1:~$ cd Documents/
+supicore@supicore1:~/Documents$ ls -a
+.  ..  cmd  sample_2
+supicore@supicore1:~/Documents$ ls -R
+.:
+cmd  sample_2
+supicore@supicore1:~/Documents$ ls -s
+total 8
+4 cmd  4 sample_2
+supicore@supicore1:~/Documents$ ls -R
+.:
+cmd  sample_2
+supicore@supicore1:~/Documents$ ls -l
+total 8
+-rw-rw-r-- 1 supicore supicore 536 Aug 19 01:46 cmd
+-rw-rw-r-- 1 supicore supicore  15 Aug 19 01:26 sample_2
+supicore@supicore1:~/Documents$ chmod 777 sample_2 
+supicore@supicore1:~/Documents$ ls
+cmd  sample_2
+supicore@supicore1:~/Documents$ ls -l
+total 8
+-rw-rw-r-- 1 supicore supicore 536 Aug 19 01:46 cmd
+-rwxrwxrwx 1 supicore supicore  15 Aug 19 01:26 sample_2
+supicore@supicore1:~/Documents$ chown supicore:supicoreCoba sample_2 
+chown: invalid group: ‘supicore:supicoreCoba’
+supicore@supicore1:~/Documents$ chown supicore:root sample_2 
+chown: changing ownership of 'sample_2': Operation not permitted
+supicore@supicore1:~/Documents$ sudo chown supicore:root sample_2 
+[sudo] password for supicore: 
+supicore@supicore1:~/Documents$ ls
+cmd  sample_2
+supicore@supicore1:~/Documents$ ls -l
+total 8
+-rw-rw-r-- 1 supicore supicore 536 Aug 19 01:46 cmd
+-rwxrwxrwx 1 supicore root      15 Aug 19 01:26 sample_2
+supicore@supicore1:~/Documents$ cp cmd ../Music/
+supicore@supicore1:~/Documents$ ls ../Music/
+cmd
+supicore@supicore1:~/Documents$ cat ../Music/cmd 
+   42  ls
+   43  ls -a
+   44  cat sample_1
+   45  cat > sample_1
+   46  cat > sample_2
+   47  cat sample_1 sample_2 > sample
+   48  cat sample
+   49  ls -a
+   50  rm sample_1
+   51  ls
+   52  mv sample_2 /home/supicore/Documents/
+   53  ls
+   54  touch test
+   55  ls
+   56  mv test test1
+   57  ls
+   58  mkdir mydirectory
+   59  ls
+   60  mkdir /tmp/MUSIC
+   61* 
+   62  mkdir dir1 dir2 dir3
+   63  ls
+   64  rmdir mydirectory
+   65  ls
+   66  mv dir1 dir1-rename
+   67  ls
+   72  man man
+   73* 
+   74  clear
+   75  ls
+   76  history
+supicore@supicore1:~/Documents$ sudo apt-get install gzip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+gzip is already the newest version (1.6-5ubuntu1).
+0 upgraded, 0 newly installed, 0 to remove and 479 not upgraded.
+supicore@supicore1:~/Documents$ ls
+cmd  sample_2
+supicore@supicore1:~/Documents$ gzip sample_2
+supicore@supicore1:~/Documents$ ls
+cmd  sample_2.gz
+
+
+~/Documents$ sudo apt-get install gzip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+gzip is already the newest version (1.6-5ubuntu1).
+0 upgraded, 0 newly installed, 0 to remove and 479 not upgraded.
+supicore@supicore1:~/Documents$ ls
+cmd  sample_2
+supicore@supicore1:~/Documents$ gzip sample_2
+supicore@supicore1:~/Documents$ ls
+cmd  sample_2.gz
+supicore@supicore1:~/Documents$ echo $HOME
+/home/supicore
+supicore@supicore1:~/Documents$ ifconfig
+
+Command 'ifconfig' not found, but can be installed with:
+
+sudo apt install net-tools
+
+supicore@supicore1:~/Documents$ ^C
+supicore@supicore1:~/Documents$ sudo apt install net-tools
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 479 not upgraded.
+Need to get 185 kB of archives.
+After this operation, 745 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu bionic/main i386 net-tools i386 1.60+git20161116.90da8a0-1ubuntu1 [185 kB]
+Fetched 185 kB in 2s (80.8 kB/s)    
+Selecting previously unselected package net-tools.
+(Reading database ... 100504 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60+git20161116.90da8a0-1ubuntu1_i386.deb ...
+Unpacking net-tools (1.60+git20161116.90da8a0-1ubuntu1) ...
+Processing triggers for man-db (2.8.3-2) ...
+Setting up net-tools (1.60+git20161116.90da8a0-1ubuntu1) ...
+supicore@supicore1:~/Documents$ ifconfig
+enp0s5: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.211.55.4  netmask 255.255.255.0  broadcast 10.211.55.255
+        inet6 fe80::21c:42ff:fe67:ef69  prefixlen 64  scopeid 0x20<link>
+        inet6 fdb2:2c26:f4e4:0:21c:42ff:fe67:ef69  prefixlen 64  scopeid 0x0<global>
+        inet6 fdb2:2c26:f4e4:0:3864:16d0:10b3:e41e  prefixlen 64  scopeid 0x0<global>
+        ether 00:1c:42:67:ef:69  txqueuelen 1000  (Ethernet)
+        RX packets 8210  bytes 8750488 (8.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4461  bytes 422754 (422.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 379  bytes 34657 (34.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 379  bytes 34657 (34.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+supicore@supicore1:~/Documents$ find /home/supicore/Documents/
+/home/supicore/Documents/
+/home/supicore/Documents/cmd
+/home/supicore/Documents/sample_2.gz
+supicore@supicore1:~/Documents$ ls -s
+total 8
+4 cmd  4 sample_2.gz
+supicore@supicore1:~/Documents$ ls -l
+total 8
+-rw-rw-r-- 1 supicore supicore 2596 Aug 19 02:14 cmd
+-rwxrwxrwx 1 supicore supicore   42 Aug 19 01:26 sample_2.gz
+supicore@supicore1:~/Documents$ grep ^C
+supicore@supicore1:~/Documents$ grep -rw-rw-r--
+grep: invalid option -- '-'
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.
+supicore@supicore1:~/Documents$ ls -l | grep -rw-rw-r--
+grep: invalid option -- '-'
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.
+supicore@supicore1:~/Documents$ ping google.com
+PING google.com (172.217.194.101) 56(84) bytes of data.
+^C64 bytes from 172.217.194.101: icmp_seq=1 ttl=128 time=53.2 ms
+
+--- google.com ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 53.264/53.264/53.264/0.000 ms
+supicore@supicore1:~/Documents$ pwd
+/home/supicore/Documents
+supicore@supicore1:~/Documents$ ps -A
+  PID TTY          TIME CMD
+    1 ?        00:00:04 systemd
+    2 ?        00:00:00 kthreadd
+    4 ?        00:00:00 kworker/0:0H
+    6 ?        00:00:00 mm_percpu_wq
+    7 ?        00:00:00 ksoftirqd/0
+    8 ?        00:00:00 rcu_sched
+    9 ?        00:00:00 rcu_bh
+   10 ?        00:00:00 migration/0
+   11 ?        00:00:00 watchdog/0
+   12 ?        00:00:00 cpuhp/0
+   13 ?        00:00:00 cpuhp/1
+   14 ?        00:00:00 watchdog/1
+   15 ?        00:00:00 migration/1
+   16 ?        00:00:00 ksoftirqd/1
+   18 ?        00:00:00 kworker/1:0H
+   19 ?        00:00:00 kdevtmpfs
+   20 ?        00:00:00 netns
+   21 ?        00:00:00 rcu_tasks_kthre
+   22 ?        00:00:00 kauditd
+   23 ?        00:00:00 kworker/1:1
+   25 ?        00:00:00 khungtaskd
+   26 ?        00:00:00 oom_reaper
+   27 ?        00:00:00 writeback
+   28 ?        00:00:00 kcompactd0
+   29 ?        00:00:00 ksmd
+   30 ?        00:00:00 khugepaged
+   31 ?        00:00:00 crypto
+   32 ?        00:00:00 kintegrityd
+   33 ?        00:00:00 kblockd
+   34 ?        00:00:00 ata_sff
+   35 ?        00:00:00 md
+   36 ?        00:00:00 edac-poller
+   37 ?        00:00:00 devfreq_wq
+   38 ?        00:00:00 watchdogd
+   40 ?        00:00:00 kswapd0
+   41 ?        00:00:00 ecryptfs-kthrea
+   83 ?        00:00:00 kthrotld
+   84 ?        00:00:00 acpi_thermal_pm
+   86 ?        00:00:00 kworker/u16:3
+   88 ?        00:00:00 scsi_eh_0
+   89 ?        00:00:00 scsi_tmf_0
+   90 ?        00:00:00 scsi_eh_1
+   91 ?        00:00:00 scsi_tmf_1
+   94 ?        00:00:00 ipv6_addrconf
+  104 ?        00:00:00 kstrp
+  123 ?        00:00:00 charger_manager
+  125 ?        00:00:00 kworker/1:1H
+  126 ?        00:00:00 kworker/0:1H
+  192 ?        00:00:00 jbd2/sda1-8
+  193 ?        00:00:00 ext4-rsv-conver
+  229 ?        00:00:00 systemd-journal
+  241 ?        00:00:00 systemd-udevd
+  292 ?        00:00:00 systemd-resolve
+  295 ?        00:00:00 systemd-timesyn
+  333 ?        00:00:00 irqbalance
+  335 ?        00:00:00 cron
+  336 ?        00:00:00 cupsd
+  339 ?        00:00:00 ModemManager
+  343 ?        00:00:00 dbus-daemon
+  354 ?        00:00:00 rsyslogd
+  356 ?        00:00:00 accounts-daemon
+  361 ?        00:00:00 avahi-daemon
+  365 ?        00:00:00 wpa_supplicant
+  374 ?        00:00:00 networkd-dispat
+  375 ?        00:00:00 udisksd
+  376 ?        00:00:00 acpid
+  380 ?        00:00:00 avahi-daemon
+  382 ?        00:00:00 systemd-logind
+  386 ?        00:00:00 NetworkManager
+  401 ?        00:00:00 polkitd
+  475 ?        00:00:00 lightdm
+  492 ?        00:00:00 dhclient
+  514 ?        00:00:00 whoopsie
+  519 ?        00:00:00 kerneloops
+  527 ?        00:00:00 kerneloops
+  539 tty7     00:00:19 Xorg
+  544 tty1     00:00:00 agetty
+  648 ?        00:00:00 lightdm
+  657 ?        00:00:00 systemd
+  658 ?        00:00:00 (sd-pam)
+  669 ?        00:00:00 lxsession
+  711 ?        00:00:00 dbus-launch
+  712 ?        00:00:00 dbus-daemon
+  727 ?        00:00:00 ssh-agent
+  739 ?        00:00:00 gvfsd
+  744 ?        00:00:00 gvfsd-fuse
+  754 ?        00:00:00 openbox
+  755 ?        00:00:03 lxpanel
+  762 ?        00:00:05 pcmanfm
+  763 ?        00:00:00 lxpolkit
+  769 ?        00:00:00 update-notifier
+  773 ?        00:00:00 ssh-agent
+  774 ?        00:00:01 xfce4-power-man
+  783 ?        00:00:00 xfconfd
+  789 ?        00:00:00 xfce4-notifyd
+  793 ?        00:00:00 nm-applet
+  804 ?        00:00:00 light-locker
+  811 ?        00:00:00 upowerd
+  818 ?        00:00:00 dconf-service
+  824 ?        00:00:01 pulseaudio
+  833 ?        00:00:00 menu-cached
+  862 ?        00:00:00 gvfs-udisks2-vo
+  871 ?        00:00:00 gvfs-gphoto2-vo
+  877 ?        00:00:00 gvfs-goa-volume
+  881 ?        00:00:00 indicator-appli
+  883 ?        00:00:00 indicator-sound
+  886 ?        00:00:00 gvfs-afc-volume
+  903 ?        00:00:00 gvfs-mtp-volume
+  909 ?        00:00:00 gvfsd-trash
+  929 ?        00:00:04 lxterminal
+  932 pts/0    00:00:00 bash
+  964 ?        00:00:00 gvfsd-network
+  976 ?        00:00:00 gvfsd-dnssd
+  999 ?        00:00:56 firefox
+ 1051 ?        00:01:02 Web Content
+ 1373 ?        00:00:00 kworker/0:0
+ 1388 ?        00:00:00 Web Content
+ 1498 ?        00:00:00 kworker/u16:0
+ 1499 ?        00:00:00 kworker/1:0
+ 1530 ?        00:00:00 kworker/0:1
+ 1545 ?        00:00:01 leafpad
+ 1728 ?        00:00:00 packagekitd
+ 1783 ?        00:00:00 kworker/u16:1
+ 1785 ?        00:00:00 kworker/1:2
+ 1800 ?        00:00:00 kworker/0:2
+ 1803 pts/0    00:00:00 ps
+supicore@supicore1:~/Documents$ top
+
+top - 02:23:55 up 27 min,  1 user,  load average: 0.00, 0.04, 0.08
+Tasks: 126 total,   1 running,  91 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.3 us,  0.3 sy,  0.0 ni, 99.2 id,  0.0 wa,  0.0 hi,  0.2 si,  0.0 st
+KiB Mem :  1021312 total,   173460 free,   407800 used,   440052 buff/cache
+KiB Swap:  2097148 total,  2096372 free,      776 used.   577312 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                       
+  539 root      20   0  168592  52964  33596 S   1.0  5.2   0:19.68 Xorg                          
+  929 supicore  20   0  114024  29852  23712 S   0.7  2.9   0:05.06 lxterminal                    
+    1 root      20   0   30348   7632   6204 S   0.0  0.7   0:04.18 systemd                       
+    2 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kthreadd                      
+    4 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 kworker/0:0H                  
+    6 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 mm_percpu_wq                  
+    7 root      20   0       0      0      0 S   0.0  0.0   0:00.12 ksoftirqd/0                   
+    8 root      20   0       0      0      0 I   0.0  0.0   0:00.70 rcu_sched                     
+    9 root      20   0       0      0      0 I   0.0  0.0   0:00.00 rcu_bh                        
+   10 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/0                   
+   11 root      rt   0       0      0      0 S   0.0  0.0   0:00.02 watchdog/0                    
+   12 root      20   0       0      0      0 S   0.0  0.0   0:00.00 cpuhp/0                       
+   13 root      20   0       0      0      0 S   0.0  0.0   0:00.00 cpuhp/1                       
+   14 root      rt   0       0      0      0 S   0.0  0.0   0:00.03 watchdog/1                    
+   15 root      rt   0       0      0      0 S   0.0  0.0   0:00.29 migration/1                   
+   16 root      20   0       0      0      0 S   0.0  0.0   0:00.56 ksoftirqd/1                   
+   18 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 kworker/1:0H                  
+   19 root      20   0       0      0      0 S   0.0  0.0   0:00.01 kdevtmpfs                     
+   20 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 netns                         
+   21 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_tasks_kthre               
+   22 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kauditd                       
+   23 root      20   0       0      0      0 I   0.0  0.0   0:00.39 kworker/1:1                   
+   25 root      20   0       0      0      0 S   0.0  0.0   0:00.00 khungtaskd                    
+   26 root      20   0       0      0      0 S   0.0  0.0   0:00.00 oom_reaper                    
+   27 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 writeback                     
+   28 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kcompactd0                    
+   29 root      25   5       0      0      0 S   0.0  0.0   0:00.00 ksmd 
