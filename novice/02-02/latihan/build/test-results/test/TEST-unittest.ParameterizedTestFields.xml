@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="unittest.ParameterizedTestFields" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-08-27T07:21:28" hostname="Supis-MacBook-Pro.local" time="0.003">
+  <properties/>
+  <testcase name="testMultiplyException[0]" classname="unittest.ParameterizedTestFields" time="0.0"/>
+  <testcase name="testMultiplyException[1]" classname="unittest.ParameterizedTestFields" time="0.0"/>
+  <testcase name="testMultiplyException[2]" classname="unittest.ParameterizedTestFields" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
