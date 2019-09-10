@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<script>
+    var fs = require('fs');
+    var contents = fs.readFileSync('file.txt','utf8');
+    //this line is not reached untul the read results are in
+    console.log(contents);
+</script>

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<script>
+    var fs = require('fs');
+    fs.readFile('file.txt','utf8', function (err, data){
+        //called at a later tme whe the results ar in
+        console.log(data)
+    });
+        //readFule returns immadiately and this line is reached right away
+
+</script>
